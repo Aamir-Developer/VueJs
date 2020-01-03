@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href = "style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Welcome to the first Vue Js project</title>
+</head>
+<body>
+
+<div id = "app">
+    {{ message }}
+    <input v-model="message">
+</div>
+
+<div id = "app2">
+    <span v-if="seen">Aamir has seen me</span>
+</div>
+
+<div id = "app3">
+    <ol>
+        <li v-for="todo in todos">
+            {{todo.text}}
+        </li>
+    </ol>
+</div>
+
+<div id = "app4">
+    <p>
+        {{message}}
+    </p>
+    <button v-on:click="reverseMessage">
+        Reverse Message
+    </button>
+</div>
+
+<div id = "app5">
+    <h1> First name : {{firstname}}</h1>
+    <h1> Last name : {{lastname}}</h1>
+    <h1> {{myDetails()}}</h1>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
